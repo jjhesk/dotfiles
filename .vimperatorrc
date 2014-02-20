@@ -8,15 +8,6 @@ set urlseparator=";\\s"
 
 "===[ Custom commands ]=================================================
 
-highlight Hint::after -append font-family: Courier New; font-size: 12px;
-
-set hintchars=hjklasdfgyuiopqwertnmzxcvb
-set defsearch=duckduckgo
-set complete=l
-set urlseparator=";\\s"
-
-"===[ Custom commands ]=================================================
-
 "Bind :r to reload
 command! r -description "Reload the current webpage" reload
 
