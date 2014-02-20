@@ -46,12 +46,3 @@ command! x -description "Save and exit" xall
 
 "Bind :exit to exit
 command! exit -description "Save and exit" xall
-
-"==[ Mappings ] =======================================================
-noremap j 3j
-noremap k 3k
-noremap <S-j> <C-p>
-noremap <S-k> <C-n>
-
-" Remove gf for view-source
-noremap gf <Nop>
