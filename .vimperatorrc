@@ -1,0 +1,57 @@
+highlight Hint::after -append font-family: Courier New; font-size: 12px;
+highlight Normal -append opacity: 0.9;
+
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+set defsearch=duckduckgo
+set complete=l
+set urlseparator=";\\s"
+
+"===[ Custom commands ]=================================================
+
+highlight Hint::after -append font-family: Courier New; font-size: 12px;
+
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+set defsearch=duckduckgo
+set complete=l
+set urlseparator=";\\s"
+
+"===[ Custom commands ]=================================================
+
+"Bind :r to reload
+command! r -description "Reload the current webpage" reload
+
+" Bind :q to quit
+command! q -description "Quit without saving" quitall
+
+"Bind :x to exit
+command! x -description "Save and exit" xall
+
+"Bind :exit to exit
+command! exit -description "Save and exit" xall
+
+"==[ Mappings ] =======================================================
+noremap j 3j
+noremap k 3k
+noremap <S-j> <C-p>
+noremap <S-k> <C-n>
+
+" Remove gf for view-source
+noremap gf <Nop>
+
+" Bind :q to quit
+command! q -description "Quit without saving" quitall
+
+"Bind :x to exit
+command! x -description "Save and exit" xall
+
+"Bind :exit to exit
+command! exit -description "Save and exit" xall
+
+"==[ Mappings ] =======================================================
+noremap j 3j
+noremap k 3k
+noremap <S-j> <C-p>
+noremap <S-k> <C-n>
+
+" Remove gf for view-source
+noremap gf <Nop>
