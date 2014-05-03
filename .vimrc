@@ -23,6 +23,9 @@ syntax on
 au BufRead,BufNewFile *.s set filetype=rpn
 au! Syntax rpn source ~/Documents/rpn.vim
 
+"recognise *.md files as markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
 "pilcrow
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
