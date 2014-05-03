@@ -1,6 +1,8 @@
 "remap j and k to be visual lines and not literal lines
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 "disable annoying ZZ save and exit vim
 nnoremap ZZ <nop>
