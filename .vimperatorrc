@@ -1,5 +1,5 @@
 highlight Hint::after -append font-family: Courier New; font-size: 12px;
-highlight Normal -append opacity: 0.9;
+highlight Normal -append opacity: 0.85;
 
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 set defsearch=duckduckgo
