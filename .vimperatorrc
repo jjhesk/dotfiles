@@ -37,3 +37,6 @@ command! x -description "Save and exit" xall
 
 "Bind :exit to exit
 command! exit -description "Save and exit" xall
+
+"mode line for it to be interpretted as a .vimrc file in vim
+" vim: set ft=vim:

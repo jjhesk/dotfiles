@@ -46,3 +46,6 @@ set softtabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
 
+"allow alternate interpretations of files using " vim: set
+set modeline
+set modelines=3
