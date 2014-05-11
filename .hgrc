@@ -1,0 +1,9 @@
+[extensions]
+hgext.graphlog=
+
+[ui]
+# Name data to appear in commits
+username = Vincent Au <u5388374@anu.edu.au>
+
+[defaults]
+log = -r :
