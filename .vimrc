@@ -15,6 +15,8 @@ set hlsearch
 
 "show the ruler, i.e. line and char count
 set ruler
+"show amount of selected lines in visual mode
+set showcmd
 
 "use the file type plugins
 filetype plugin indent on
