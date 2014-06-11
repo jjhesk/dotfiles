@@ -1,9 +1,11 @@
 [extensions]
 hgext.graphlog=
+hgext.record=
 
 [ui]
 # Name data to appear in commits
 username = Vincent Au <u5388374@anu.edu.au>
+ignore = ~/.hgignore
 
 [defaults]
 log = -r :
