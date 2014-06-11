@@ -1,3 +1,4 @@
+syntax: glob
 *.dSYM
 .DS_Store
 .DS_Store?
