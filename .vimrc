@@ -14,9 +14,13 @@ set ai
 set hlsearch
 
 "show the ruler, i.e. line and char count
+set nu
 set ruler
 "show amount of selected lines in visual mode
 set showcmd
+
+"show as much of the last line as possible (no @s)
+set display+=lastline
 
 "use the file type plugins
 filetype plugin indent on
@@ -41,11 +45,12 @@ set fillchars=diff:⣿
 
 "expand tab to spaces
 set expandtab
+set smarttab
+set softtabstop=0
 set tabstop=4
-set softtabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
 
 "allow alternate interpretations of files using " vim: set
 set modeline
-set modelines=3
+"set modelines=3
