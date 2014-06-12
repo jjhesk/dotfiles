@@ -5,11 +5,13 @@ alias rpn="java -jar ~/Documents/anu/comp2300/rpeanut/rPeANUt2.3.jar"
 alias jj="java -jar"
 
 #git
+alias ga="git add"
 alias gc="git commit"
 alias gch="git checkout"
-alias gp="git push"
-alias ga="git add"
 alias gd="git diff"
+alias gl="git log"
+alias gp="git push"
+alias gs="git status"
 
 #hg
 alias hga="hg add"
