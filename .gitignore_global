@@ -1,5 +1,6 @@
 syntax: glob
 *.dSYM
+*.swp
 .DS_Store
 .DS_Store?
 .Spotlight-V100
