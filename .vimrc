@@ -53,4 +53,6 @@ set backspace=indent,eol,start
 
 "allow alternate interpretations of files using " vim: set
 set modeline
-"set modelines=3
+
+"set 15 line buffer when scrolling
+set scrolloff=15
