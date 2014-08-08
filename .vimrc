@@ -1,3 +1,16 @@
+"enable vundle and plugins
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'bitc/vim-hdevtools'
+
+call vundle#end()
+
+
 "remap j and k to be visual lines and not literal lines
 nnoremap j gj
 nnoremap k gk
@@ -56,3 +69,4 @@ set modeline
 
 "set 15 line buffer when scrolling
 set scrolloff=15
+
