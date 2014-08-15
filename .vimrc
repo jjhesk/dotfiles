@@ -7,9 +7,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bitc/vim-hdevtools'
+Plugin 'gerw/vim-latex-suite'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
-
 
 "remap j and k to be visual lines and not literal lines
 nnoremap j gj
@@ -19,6 +20,9 @@ vnoremap k gk
 
 "disable annoying ZZ save and exit vim
 nnoremap ZZ <nop>
+
+"space to toggle fold
+nnoremap <Space> za
 
 "enable auto indenting
 set ai
@@ -40,12 +44,18 @@ filetype plugin indent on
 
 "enable syntax highlighting
 syntax on
+
 "custom rPeANUt highlighting
 au BufRead,BufNewFile *.s set filetype=rpn
 au! Syntax rpn source ~/Documents/rpn.vim
 
 "recognise *.md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+
+"color scheme settings
+autocmd BufEnter * color default
+autocmd BufEnter *.tex color gruvbox
+autocmd BufEnter *.tex set bg=dark
 
 "pilcrow
 set list
@@ -69,4 +79,3 @@ set modeline
 
 "set 15 line buffer when scrolling
 set scrolloff=15
-
