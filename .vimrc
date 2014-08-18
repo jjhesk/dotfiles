@@ -51,6 +51,7 @@ au! Syntax rpn source ~/Documents/rpn.vim
 
 "recognise *.md files as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufEnter *.md set spell
 
 "color scheme settings
 autocmd BufEnter * color default
@@ -76,6 +77,3 @@ set backspace=indent,eol,start
 
 "allow alternate interpretations of files using " vim: set
 set modeline
-
-"set 15 line buffer when scrolling
-set scrolloff=15
