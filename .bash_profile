@@ -29,3 +29,6 @@ export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
 function mkcd() {
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+
+bind '"\t":menu-complete' #bind tab to cycle through options
+bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
