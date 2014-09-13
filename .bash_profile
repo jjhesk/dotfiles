@@ -30,5 +30,10 @@ function mkcd() {
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
 
-bind '"\t":menu-complete' #bind tab to cycle through options
-bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
+# open vimr from terminal
+function vimr() {
+    open -a VimR.app "$@"
+}
+
+#bind '"\t":menu-complete' #bind tab to cycle through options
+#bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
