@@ -8,7 +8,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'bitc/vim-hdevtools'
 Plugin 'gerw/vim-latex-suite'
-Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 
@@ -54,22 +53,17 @@ filetype plugin indent on
 "enable syntax highlighting
 syntax on
 
-"custom rPeANUt highlighting
-au BufRead,BufNewFile *.s set filetype=rpn
+"extra file types
+au BufRead,BufNewFile *.s   set filetype=rpn
+au BufRead,BufNewFile *.lts set filetype=lts
+au BufRead,BufNewFile *.md  set filetype=markdown
+
+"custom highlighting
+au! Syntax lts source ~/Documents/lts.vim
 au! Syntax rpn source ~/Documents/rpn.vim
 
-"custom LTS highlighting
-au BufRead,BufNewFile *.lts set filetype=lts
-au! Syntax lts source ~/Documents/lts.vim
-
-"recognise *.md files as markdown
-au BufRead,BufNewFile *.md set filetype=markdown
-au BufEnter *.md set spell
-
-"color scheme settings
-autocmd BufEnter * color smyck
-autocmd BufEnter *.tex color gruvbox
-autocmd BufEnter *.tex set bg=dark
+au FileType markdown    setlocal spell
+au FileType gitcommit   setlocal spell tw=68
 
 "pilcrow
 set list
@@ -92,5 +86,17 @@ set backspace=indent,eol,start
 set textwidth=79
 set formatoptions+=want
 
+"remove double space after sentence end
+set nojoinspaces
+
 "allow alternate interpretations of files using " vim: set
 set modeline
+
+"color scheme
+color desert
+
+"custom highlighting
+hi Normal   cterm=none ctermbg=none ctermfg=15 gui=none guibg=#282828 guifg=#F7F7F7
+hi Comment  cterm=none ctermbg=none ctermfg=8  gui=none               guifg=#8F8F8F
+hi LineNr   cterm=none ctermbg=none ctermfg=8  gui=none guibg=#282828 guifg=#8F8F8F
+
