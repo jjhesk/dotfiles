@@ -28,15 +28,3 @@ noremap <S-k> <C-n>
 
 " Remove gf for view-source
 noremap gf <Nop>
-
-" Bind :q to quit
-command! q -description "Quit without saving" quitall
-
-"Bind :x to exit
-command! x -description "Save and exit" xall
-
-"Bind :exit to exit
-command! exit -description "Save and exit" xall
-
-"mode line for it to be interpretted as a .vimrc file in vim
-" vim: set ft=vim:
