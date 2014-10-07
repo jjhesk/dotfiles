@@ -30,6 +30,21 @@ function mkcd() {
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
 
+# change git user
+function gu() {
+    if [ "$1" = "va" ];
+    then
+        git config user.name "Vince Au"
+        git config user.email "vinceau@users.noreply.github.com"
+    elif [ "$1" = "lv" ];
+    then
+        git config user.name "little-vince"
+        git config user.email "littlevince09@gmail.com"
+    else
+        echo "Incorrect input. Expecting 'va' or 'lv'"
+    fi
+}
+
 # open vimr from terminal
 function vimr() {
     open -a VimR.app "$@"
