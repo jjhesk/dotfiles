@@ -50,5 +50,10 @@ function vimr() {
     open -a VimR.app "$@"
 }
 
+# case insensitive find function
+function f() {
+    find . -type f -iname "*$@*"
+}
+
 #bind '"\t":menu-complete' #bind tab to cycle through options
 #bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
