@@ -92,6 +92,11 @@ set nojoinspaces
 "allow alternate interpretations of files using " vim: set
 set modeline
 
+"enable folding
+set foldmethod=syntax
+set foldlevel=1
+set foldminlines=10
+
 "color scheme
 color desert
 
