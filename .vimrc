@@ -17,11 +17,11 @@ noremap k gk
 
 "remap alt+j to do what shift+j was meant to do (join lines)
 "won't work on non-mac machines
-nnoremap ∆ J
+noremap ∆ J
 
 "remap shift J/K for in vim tab switching
-nnoremap J gT
-nnoremap K gt
+noremap J gT
+noremap K gt
 
 "remap Y to be copy to clipboard
 noremap Y "+y
