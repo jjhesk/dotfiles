@@ -55,5 +55,9 @@ function f() {
     find . -type f -iname "*$@*"
 }
 
+function go() {
+    gcc $@.c -Wall -o $@;
+}
+
 #bind '"\t":menu-complete' #bind tab to cycle through options
 #bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
