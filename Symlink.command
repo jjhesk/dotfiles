@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#/usr/bin/env bash
 
 p=$(pwd)
 
@@ -8,3 +8,5 @@ ln -s $p/.gitignore_global ~/.hgignore
 ln -s $p/.hgrc ~
 ln -s $p/.vimperatorrc ~
 ln -s $p/.vimrc ~
+
+git config --global core.excludesfile ~/.gitignore_global
