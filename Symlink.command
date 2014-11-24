@@ -10,3 +10,4 @@ ln -s $p/.vimperatorrc ~
 ln -s $p/.vimrc ~
 
 git config --global core.excludesfile ~/.gitignore_global
+echo "source ~/.bashrc" >> ~/.bash_profile
