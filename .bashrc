@@ -65,9 +65,5 @@ function go() {
     gcc $@.c -Wall -o $@;
 }
 
-function c() {
-    python -c "print($@)"
-}
-
 #bind '"\t":menu-complete' #bind tab to cycle through options
 #bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
