@@ -100,10 +100,5 @@ set foldlevel=1
 set foldminlines=10
 
 "color scheme
-color desert
-
-"custom highlighting
-hi Normal   cterm=none ctermbg=none ctermfg=15 gui=none guibg=#282828 guifg=#F7F7F7
-hi Comment  cterm=none ctermbg=none ctermfg=8  gui=none               guifg=#8F8F8F
-hi LineNr   cterm=none ctermbg=none ctermfg=8  gui=none guibg=#282828 guifg=#8F8F8F
-
+color gruvbox
+set bg=dark
