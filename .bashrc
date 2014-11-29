@@ -1,9 +1,15 @@
 alias partch="ssh -X u5388374@partch.anu.edu.au"
-alias ls="ls -G"
+alias ls="ls -Gh"
+alias mkdir="mkdir -p"
+alias cp="cp -r"
 alias p="ping www.google.com"
 alias jj="java -jar"
 alias rpn="jj ~/Documents/anu/comp2300/rpeanut/rPeANUt2.3.jar"
 alias ltsa="jj ~/Documents/anu/comp2310/ltsatool/ltsa.jar"
+alias st="speedtest-cli"
+alias l="ls -la"
+alias js="jekyll server"
+alias py="python"
 
 #git
 alias ga="git add"
