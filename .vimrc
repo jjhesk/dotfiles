@@ -83,8 +83,10 @@ set shiftwidth=4
 set backspace=indent,eol,start
 
 "wrap lines at 80 characters
-set textwidth=79
-set formatoptions+=want
+"set textwidth=79
+"set formatoptions+=want
+
+au BufRead,BufNewFile *.c, *.md, *.py setlocal textwidth=78
 
 "remove double space after sentence end
 set nojoinspaces
