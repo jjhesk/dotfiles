@@ -97,8 +97,9 @@ set modeline
 
 "enable folding
 set foldmethod=syntax
-set foldlevel=1
 set foldminlines=10
+"open all folds by default
+autocmd BufEnter * :normal zR
 
 "color scheme
 color gruvbox
