@@ -1,5 +1,6 @@
 alias partch="ssh -X u5388374@partch.anu.edu.au"
 alias ls="ls -Gh"
+alias rm="rm -d"
 alias mkdir="mkdir -p"
 alias cp="cp -r"
 alias p="ping www.google.com"
