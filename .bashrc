@@ -28,7 +28,6 @@ alias hgp="hg push"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=.:$PATH
-export PATH=$PATH:"/Users/vince/Development/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"
 export PATH=$PATH:~/.cabal/bin
 
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
