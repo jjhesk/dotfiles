@@ -63,8 +63,12 @@ au BufRead,BufNewFile *.md  set filetype=markdown
 au! Syntax lts source ~/Documents/lts.vim
 au! Syntax rpn source ~/Documents/rpn.vim
 
-au FileType markdown    setlocal spell
-au FileType gitcommit   setlocal spell tw=68
+"autocommands for filetypes
+au FileType gitcommit   setlocal spell  textwidth=68
+au FileType markdown    setlocal spell  textwidth=79 formatoptions+=want
+au FileType text        setlocal spell  textwidth=79 formatoptions+=want
+au FileType c           setlocal        textwidth=79
+au FileType python      setlocal        textwidth=79
 
 "pilcrow
 set list
@@ -82,12 +86,6 @@ set softtabstop=0
 set tabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
-
-"wrap lines at 80 characters
-"set textwidth=79
-"set formatoptions+=want
-
-au BufRead,BufNewFile *.c, *.md, *.py setlocal textwidth=78
 
 "remove double space after sentence end
 set nojoinspaces
