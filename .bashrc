@@ -26,10 +26,6 @@ alias hga="hg add"
 alias hgc="hg commit"
 alias hgp="hg push"
 
-export PATH=/usr/local/bin:$PATH
-export PATH=.:$PATH
-export PATH=$PATH:~/.cabal/bin
-
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
 
 #change the prompt to be host:cwd $
