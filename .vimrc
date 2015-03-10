@@ -114,3 +114,6 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+"let :W do the same thing as :w
+command! W execute "w"
