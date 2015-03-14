@@ -63,13 +63,6 @@ au BufRead,BufNewFile *.md  set filetype=markdown
 au! Syntax lts source ~/Documents/lts.vim
 au! Syntax rpn source ~/Documents/rpn.vim
 
-"autocommands for filetypes
-au FileType gitcommit   setlocal spell  textwidth=68
-au FileType markdown    setlocal spell  textwidth=79 formatoptions+=want
-au FileType text        setlocal spell  textwidth=79 formatoptions+=want
-au FileType c           setlocal        textwidth=79
-au FileType python      setlocal        textwidth=79
-
 "pilcrow
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
@@ -96,6 +89,14 @@ set modeline
 "enable folding
 set foldmethod=syntax
 set foldminlines=10
+
+"autocommands for filetypes
+au FileType gitcommit   setlocal spell  textwidth=68
+au FileType markdown    setlocal spell  textwidth=79 formatoptions+=want
+au FileType text        setlocal spell  textwidth=79 formatoptions+=want
+au FileType c           setlocal        textwidth=79
+au FileType python      setlocal        textwidth=79 foldmethod=indent
+
 "open all folds by default
 autocmd BufEnter * :normal zR
 
