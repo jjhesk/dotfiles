@@ -6,6 +6,9 @@ set defsearch=duckduckgo
 set complete=l
 set urlseparator=";\\s"
 
+"required for scrolling in pdf documents
+set scroll=25
+
 "don't switch to tab when using tabopen
 set activate-=tabopen
 
