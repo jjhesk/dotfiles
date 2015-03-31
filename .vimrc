@@ -72,12 +72,12 @@ set splitbelow
 set splitright
 set fillchars=diff:⣿
 
-"expand tab to spaces
-set expandtab
+"indentation
+set tabstop=8       "tab width
+set shiftwidth=4    "ident width
+set softtabstop=0   "columns in a tab
+set expandtab       "expand tabs to spaces
 set smarttab
-set softtabstop=0
-set tabstop=4
-set shiftwidth=4
 set backspace=indent,eol,start
 
 "remove double space after sentence end
@@ -91,11 +91,11 @@ set foldmethod=syntax
 set foldminlines=10
 
 "autocommands for filetypes
-au FileType gitcommit   setlocal spell  textwidth=68
-au FileType markdown    setlocal spell  textwidth=79 formatoptions+=want
-au FileType text        setlocal spell  textwidth=79 formatoptions+=want
-au FileType c           setlocal        textwidth=79
-au FileType python      setlocal        textwidth=79 foldmethod=indent
+au FileType gitcommit   setlocal textwidth=68 spell
+au FileType markdown    setlocal textwidth=79 formatoptions+=want spell
+au FileType text        setlocal textwidth=79 formatoptions+=want spell
+au FileType c           setlocal textwidth=79
+au FileType python      setlocal textwidth=79 foldmethod=indent
 
 "open all folds by default
 autocmd BufEnter * :normal zR
