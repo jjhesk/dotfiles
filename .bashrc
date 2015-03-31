@@ -56,9 +56,14 @@ function vimr() {
     open -a VimR.app "$@"
 }
 
-# case insensitive find function
+# case insensitive file find function - filenames
 function f() {
     find . -type f -iname "*$@*"
+}
+
+# case insensitive content find function - file content
+function ff() {
+    grep -r "$@" .
 }
 
 function go() {
