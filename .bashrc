@@ -3,7 +3,6 @@ alias ls="ls -Gh"
 alias rm="rm -d"
 alias mkdir="mkdir -p"
 alias cp="cp -rv"
-alias p="ping www.google.com"
 alias jj="java -jar"
 alias rpn="jj ~/Documents/anu/comp2300/rpeanut/rPeANUt2.3.jar"
 alias ltsa="jj ~/Documents/anu/comp2310/ltsatool/ltsa.jar"
@@ -34,6 +33,16 @@ export PS1="\[\033[36m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 # make and change directory
 function mkcd() {
     mkdir -p "$@" && eval cd "\"\$$#\"";
+}
+
+#better ping function
+function p() {
+    if [ -z "$1" ] #check if argument is empty string
+    then
+        ping google.com
+    else
+        ping "$1"
+    fi
 }
 
 # change git user
