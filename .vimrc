@@ -33,6 +33,9 @@ nnoremap ZZ <nop>
 "space to toggle fold
 nnoremap <Space> za
 
+"set shift+tab to autocomplete word
+inoremap <S-Tab> <C-n>
+
 "enable auto indenting
 set ai
 
