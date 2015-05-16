@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'bitc/vim-hdevtools'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'noah/vim256-color'
 
