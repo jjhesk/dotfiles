@@ -27,10 +27,13 @@ command! x -description "Save and exit" xall
 command! exit -description "Save and exit" xall
 
 "==[ Mappings ] =======================================================
+"faster jk scrolling
 noremap j 3j
 noremap k 3k
+
+"Shift j and k for tab switching
 noremap <S-j> <C-p>
 noremap <S-k> <C-n>
 
-" Remove gf for view-source
+"tfw no gf.. (remove gf for view-source)
 noremap gf <Nop>
