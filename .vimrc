@@ -61,6 +61,7 @@ syntax on
 au BufRead,BufNewFile *.s   set filetype=rpn
 au BufRead,BufNewFile *.lts set filetype=lts
 au BufRead,BufNewFile *.md  set filetype=markdown
+au BufRead,BufNewFile .vimperatorrc set filetype=vim
 
 "custom highlighting
 au! Syntax lts source ~/Documents/lts.vim
