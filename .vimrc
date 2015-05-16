@@ -96,7 +96,7 @@ set foldminlines=10
 
 "autocommands for filetypes
 au FileType gitcommit   setlocal textwidth=68 spell
-au FileType markdown    setlocal textwidth=79 formatoptions+=want spell
+au FileType markdown    setlocal spell
 au FileType text        setlocal textwidth=79 formatoptions+=want spell
 au FileType c           setlocal textwidth=79
 au FileType python      setlocal textwidth=79 foldmethod=indent
