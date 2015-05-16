@@ -32,7 +32,7 @@ export PS1="\[\033[36m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
 # make and change directory
 function mkcd() {
-    mkdir -p "$@" && eval cd "\"\$$#\"";
+    mkdir -p "$@" && eval cd "\"\$$#\""
 }
 
 #better ping function
@@ -47,11 +47,11 @@ function p() {
 
 # change git user
 function gu() {
-    if [ "$1" = "va" ];
+    if [ "$1" = "va" ]
     then
         git config user.name "Vince Au"
         git config user.email "vinceau@users.noreply.github.com"
-    elif [ "$1" = "lv" ];
+    elif [ "$1" = "lv" ]
     then
         git config user.name "little-vince"
         git config user.email "littlevince09@gmail.com"
@@ -76,7 +76,7 @@ function ff() {
 }
 
 function go() {
-    gcc $@.c -Wall -o $@;
+    gcc $@.c -Wall -o $@
 }
 
 #bind '"\t":menu-complete' #bind tab to cycle through options
