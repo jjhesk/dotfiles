@@ -35,6 +35,9 @@ nnoremap <Space> za
 "set shift+tab to autocomplete word
 inoremap <S-Tab> <C-n>
 
+"don't require two escapes to exit visual mode
+vnoremap <Esc> <C-c>
+
 "enable auto indenting
 set ai
 
