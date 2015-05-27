@@ -121,3 +121,8 @@ endfunction
 
 "let :W do the same thing as :w
 command! W execute "w"
+
+" Clean whitespace
+function! Clean()
+    %s/\s\+$//
+endfunction
