@@ -79,5 +79,14 @@ function go() {
     gcc $@.c -Wall -o $@
 }
 
+function pd() {
+    if [ -z "$2" ] #check if second argument is empty
+    then
+        pandoc "$1".md -o "$1".pdf && open "$1".pdf    
+    else
+        pandoc "$1".md -o "$1"."$2" && open "$1"."$2"
+    fi
+}
+
 #bind '"\t":menu-complete' #bind tab to cycle through options
 #bind '"\e[Z":"\e-1\C-i"' #bind shift+tab to cycle backwards
