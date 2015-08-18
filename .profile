@@ -1,5 +1,6 @@
 export SDK_ROOT=~/Library/Android/sdk
 export NDK_ROOT=~/Library/Android/android-ndk-r10d
+export ANDROID_HOME=~/Library/Android/sdk
 export GRADLE_HOME=/Applications/Android\ Studio.app/Contents/gradle/gradle-2.2.1
 export GAE_HOME=/usr/local/google_appengine
 
