@@ -2,7 +2,6 @@ syntax: glob
 *.dSYM
 *.pyc
 *.swp
-*.yaml
 .DS_Store
 .DS_Store?
 .Spotlight-V100
