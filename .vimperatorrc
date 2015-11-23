@@ -14,9 +14,6 @@ set activate-=tabopen
 
 "===[ Custom commands ]=================================================
 
-"Bind :r to reload
-command! r -description "Reload the current webpage" reload
-
 " Bind :q to quit
 command! q -description "Quit without saving" quitall
 
