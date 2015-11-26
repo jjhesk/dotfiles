@@ -99,6 +99,9 @@ au FileType text        setlocal textwidth=79 formatoptions+=want spell
 au FileType c           setlocal textwidth=79
 au FileType python      setlocal textwidth=79 foldmethod=indent
 
+"none of that fake english
+set spelllang=en_au
+
 "open all folds by default
 autocmd BufEnter * :normal zR
 
