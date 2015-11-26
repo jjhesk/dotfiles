@@ -10,6 +10,7 @@ ln -s $p/.profile ~
 ln -s $p/.pylintrc ~
 ln -s $p/.vimperatorrc ~
 ln -s $p/.vimrc ~
+ln -s $p/.nvimrc ~
 
 git config --global core.excludesfile ~/.gitignore_global
 echo -e "source ~/.profile\nsource ~/.bashrc" >> ~/.bash_profile
