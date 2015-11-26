@@ -11,6 +11,13 @@ alias l="ls -la"
 alias js="jekyll server"
 alias py="python"
 
+# Jump back n directories at a time
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+
 #git
 alias ga="git add"
 alias gc="git commit"
