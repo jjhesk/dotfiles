@@ -10,7 +10,8 @@ alias rpn="jj ~/Documents/anu/comp2300/rpeanut/rPeANUt2.3.jar"
 alias ltsa="jj ~/Documents/anu/comp2310/ltsatool/ltsa.jar"
 alias st="speedtest-cli"
 alias js="jekyll server"
-alias py="python"
+alias py="python -i"
+alias py3="python3 -i"
 
 # Jump back n directories at a time
 alias ..='cd ..'
