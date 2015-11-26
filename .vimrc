@@ -126,6 +126,9 @@ function! Clean()
     %s/\s\+$//
 endfunction
 
+" Enable fenced code block syntax in markdown documents
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
 " When writing, automatically create directories if they don't exist
 function s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
