@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'vinceau/vim-rpeanut-syntax'
+Plugin 'vinceau/vim-ltsa-syntax'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'noah/vim256-color'
 
@@ -61,12 +62,8 @@ filetype plugin indent on
 syntax on
 
 "extra file types
-au BufRead,BufNewFile *.lts set filetype=lts
 au BufRead,BufNewFile *.md  set filetype=markdown
 au BufRead,BufNewFile .vimperatorrc set filetype=vim
-
-"custom highlighting
-au! Syntax lts source ~/Documents/lts.vim
 
 "pilcrow
 set list
