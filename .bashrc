@@ -36,8 +36,6 @@ alias hgp="hg push"
 
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
 
-#change the prompt to be host:cwd $
-export PS1="\[\033[36m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
 # make and change directory
 function mkcd() {
