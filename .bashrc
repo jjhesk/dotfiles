@@ -36,6 +36,11 @@ alias hgp="hg push"
 
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
 
+#vim bindings in terminal
+set -o vi
+
+#set default editor
+export EDITOR=nvim
 
 # make and change directory
 function mkcd() {
