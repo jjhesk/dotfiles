@@ -133,6 +133,33 @@ function! Clean()
     %s/\s\+$//
 endfunction
 
+" Delete duplicate lines
+function! NoDups()
+    g/^/m0
+    g/^\(.*\)\ze\n\%(.*\n\)*\1$/d
+    g/^/m0
+endfunction
+
+function! ShowDups() range
+  let lineCounts = {}
+  let lineNum = a:firstline
+  while lineNum <= a:lastline
+    let lineText = getline(lineNum)
+    if lineText != ""
+      let lineCounts[lineText] = (has_key(lineCounts, lineText) ? lineCounts[lineText] : 0) + 1
+    endif
+    let lineNum = lineNum + 1
+  endwhile
+  exe 'syn clear Repeat'
+  for lineText in keys(lineCounts)
+    if lineCounts[lineText] >= 2
+      exe 'syn match Repeat "^' . escape(lineText, '".\^$*[]') . '$"'
+    endif
+  endfor
+endfunction
+
+command! -range=% ShowDups <line1>,<line2>call ShowDups()
+
 " Enable fenced code block syntax in markdown documents
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
