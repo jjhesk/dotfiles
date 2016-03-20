@@ -22,12 +22,17 @@ alias ......='cd ../../../../../'
 
 #git
 alias ga="git add"
-alias gc="git commit"
+alias gap="git add -p"
+alias gc="git commit -v"
 alias gch="git checkout"
 alias gd="git diff"
 alias gl="git log"
 alias gp="git push"
+alias gpp="git push --set-upstream origin master"
 alias gs="git status"
+alias grm="git rm --cached"
+alias gpg="git push --all google"
+alias gr="git reset --soft HEAD~1"
 
 #hg
 alias hga="hg add"
