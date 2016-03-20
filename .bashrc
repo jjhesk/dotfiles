@@ -39,6 +39,10 @@ alias hga="hg add"
 alias hgc="hg commit"
 alias hgp="hg push"
 
+#svn
+alias svnd="svn diff | view -"
+alias svnl="svn log | less"
+
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
 
 #vim bindings in terminal
