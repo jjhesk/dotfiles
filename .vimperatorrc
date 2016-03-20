@@ -12,6 +12,9 @@ set scroll=25
 "don't switch to tab when using tabopen
 set activate-=tabopen
 
+"use vimr for external editor
+set editor=/usr/local/bin/vimr
+
 "===[ Custom commands ]=================================================
 
 " Bind :q to quit
