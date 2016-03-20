@@ -111,10 +111,6 @@ autocmd BufEnter * :normal zR
 color gruvbox
 set bg=dark
 
-"enable the mouse in vim
-if has("mouse")
-    set mouse=a
-endif
 
 "handle paste (no auto indent)
 let &t_SI .= "\<Esc>[?2004h"
