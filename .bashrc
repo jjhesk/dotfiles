@@ -12,6 +12,7 @@ alias st="speedtest-cli"
 alias js="jekyll server"
 alias py="python"
 alias py3="python3"
+alias v="nvim -p"
 
 # Jump back n directories at a time
 alias ..='cd ..'
