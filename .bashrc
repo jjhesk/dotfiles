@@ -1,4 +1,6 @@
 alias partch="ssh -X u5388374@partch.anu.edu.au"
+alias ppartch="ssh -D 8080 -C -N u5388374@partch.anu.edu.au"
+alias dl="aria2c -x 4"
 alias ls="ls -Gh"
 alias l="ls -la"
 alias ll="ls -l"
@@ -12,8 +14,16 @@ alias st="speedtest-cli"
 alias js="jekyll server"
 alias py="python"
 alias py3="python3"
+alias rf="source ~/.bash_profile"
+alias avd="emulator -avd Nexus_5_API_21_x86"
 alias v="nvim -p"
+alias sudo="sudo "
+alias diff="colordiff -u"
+alias adbp="adb push -p"
 alias brew="brew -v"
+alias gz="tar -cvzf"
+alias du="du -hs"
+alias r="source $(which ranger)"
 
 # Jump back n directories at a time
 alias ..='cd ..'
