@@ -18,7 +18,7 @@ set editor=/usr/local/bin/vimr
 "===[ Custom commands ]=================================================
 
 " Bind :q to quit
-command! q -description "Quit without saving" quitall
+command! q -description "Quit Firefox" quitall
 
 "Bind :x to exit
 command! x -description "Save and exit" xall
