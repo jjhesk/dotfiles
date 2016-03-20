@@ -82,11 +82,6 @@ function gu() {
     fi
 }
 
-# open vimr from terminal
-function vimr() {
-    open -a VimR.app "$@"
-}
-
 # case insensitive file find function - filenames
 function f() {
     find . -type f -iname "*$@*"
