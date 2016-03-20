@@ -48,7 +48,7 @@ function mkcd() {
 }
 
 #better ping function
-function p() {
+function P() {
     if [ -z "$1" ] #check if argument is empty string
     then
         ping google.com
@@ -83,7 +83,7 @@ function f() {
 }
 
 # case insensitive content find function - file content
-function ff() {
+function F() {
     grep -r "$@" .
 }
 
