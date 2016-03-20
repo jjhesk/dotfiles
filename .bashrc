@@ -111,12 +111,9 @@ function go() {
 function pd() {
     if [ -z "$2" ] #check if second argument is empty
     then
-        pandoc "$1".md -o "$1".pdf && open "$1".pdf
-    elif [ "$2" == "rst" ]
-    then
-        pandoc "$1".md --from=markdown --to=rst -o "$1".rst
+        pandoc "$1.md" -o "$1.pdf" && open "$1.pdf"
     else
-        pandoc "$1".md -o "$1"."$2" && open "$1"."$2"
+        pandoc "$1.md" -o "$1.$2" && open "$1.$2"
     fi
 }
 
