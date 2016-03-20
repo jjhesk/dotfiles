@@ -13,6 +13,7 @@ alias js="jekyll server"
 alias py="python"
 alias py3="python3"
 alias v="nvim -p"
+alias brew="brew -v"
 
 # Jump back n directories at a time
 alias ..='cd ..'
