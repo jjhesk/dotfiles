@@ -43,6 +43,8 @@ vnoremap <Esc> <C-c>
 "enable auto indenting
 set ai
 
+"ignore case if search term is all lowercase
+set ignorecase smartcase
 "highlight last searched term
 set hlsearch
 
