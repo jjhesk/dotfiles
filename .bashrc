@@ -49,6 +49,7 @@ export HISTCONTROL=ignoredups:erasedups # no duplicate entries in history
 set -o vi
 
 #set default editor
+export VISUAL=nvim
 export EDITOR=nvim
 
 # make and change directory
