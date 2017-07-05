@@ -25,6 +25,7 @@ alias brew="brew -v"
 alias gz="tar -cvzf"
 alias du="du -hs"
 alias r="source $(which ranger)"
+alias ranger="r"
 
 # Jump back n directories at a time
 alias ..='cd ..'
