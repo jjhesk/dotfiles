@@ -1,5 +1,5 @@
 highlight Hint -append font-family: Courier New; font-size: 12px; background-color: aqua; color: black; padding: 3px;
-highlight Normal -append opacity: 0.85;
+highlight Normal -append opacity: 0.80;
 
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 set defsearch=duckduckgo
