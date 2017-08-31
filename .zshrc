@@ -6,5 +6,5 @@ alias ff="fasd -f"
 alias fa="fasd -a"
 alias fs="fasd -s"
 alias fd="fasd -d"
-alias vv='fasd -fe vim'
+alias vv='fasd -fe nvim'
 alias oo='fasd -ae open'
