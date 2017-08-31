@@ -18,6 +18,9 @@ set editor=/usr/local/bin/vimr
 "only show 10 items cuz 20 (default) makes the bar too big
 set maxitems=10
 
+"change the leader which is "\" by default
+let mapleader=","
+
 "tfw no gf.. (remove gf for view-source)
 noremap gf <Nop>
 
