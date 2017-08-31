@@ -25,6 +25,11 @@ noremap ∆ J
 noremap J gT
 noremap K gt
 
+"faster word movement
+noremap W 5w
+noremap B 5b
+noremap E 5e
+
 "remap Y to be copy to clipboard
 noremap Y "+y
 
