@@ -37,7 +37,8 @@ command! exit -description "Save and exit" xall
 
 "Hide/Show the statusline with :toggle
 command! toggle -description "Toggle statusline visibility" :js statusline.setVisibility(statusline.setVisibility.TOGGLE)
-
+"bind leader t for toggle
+nnoremap <leader>t :toggle<CR>
 
 "==[ Mappings ] =======================================================
 "faster jk scrolling
