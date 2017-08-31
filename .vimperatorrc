@@ -18,6 +18,9 @@ set editor=/usr/local/bin/vimr
 "only show 10 items cuz 20 (default) makes the bar too big
 set maxitems=10
 
+"tfw no gf.. (remove gf for view-source)
+noremap gf <Nop>
+
 "===[ Custom commands ]=================================================
 
 " Bind :q to quit
@@ -41,6 +44,3 @@ noremap k 3k
 "Shift j and k for tab switching
 noremap <S-j> <C-p>
 noremap <S-k> <C-n>
-
-"tfw no gf.. (remove gf for view-source)
-noremap gf <Nop>
