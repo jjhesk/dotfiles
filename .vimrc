@@ -85,7 +85,7 @@ set splitright
 set fillchars=diff:⣿
 
 "indentation
-set tabstop=8       "tab width
+set tabstop=4       "tab width
 set shiftwidth=4    "ident width
 set softtabstop=0   "columns in a tab
 set expandtab       "expand tabs to spaces
