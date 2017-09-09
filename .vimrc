@@ -113,6 +113,9 @@ au FileType python      setlocal textwidth=79 foldmethod=indent
 "run Neomake after each write
 autocmd! BufWritePost * Neomake
 
+"enable mouse (in neovim)
+set mouse=a
+
 "none of that fake english
 set spelllang=en_au
 
