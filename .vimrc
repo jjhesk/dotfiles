@@ -1,4 +1,6 @@
-"enable vundle and plugins
+"
+" VUNDLE PLUGINS
+"
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,6 +19,10 @@ Plugin 'benekastah/neomake'  " Asynchronous linting
 
 call vundle#end()
 
+
+"
+" KEY REMAPPING
+"
 "remap j and k to be visual lines and not literal lines
 noremap j gj
 noremap k gk
@@ -43,12 +49,39 @@ nnoremap ZZ <nop>
 "space to toggle fold
 nnoremap <Space> za
 
-"set shift+tab to autocomplete word
-inoremap <S-Tab> <C-n>
-
 "set zs to select first option in spell and correct all occurences
 noremap zs z=1<Enter><Enter>
 
+"set shift+tab to autocomplete word
+inoremap <S-Tab> <C-n>
+
+
+"
+"  COMMAND REMAPPING
+"
+"let :W do the same thing as :w
+command! W execute "w"
+
+"let :Q do the same thing as :q
+command! Q execute "q"
+
+
+"
+" MISC SETTINGS
+"
+"use the file type plugins
+filetype plugin indent on
+
+"enable syntax highlighting
+syntax on
+
+"gruvbox + dark background = life
+color gruvbox
+
+
+"
+" SETTINGS
+"
 "enable auto indenting
 set ai
 
@@ -65,16 +98,6 @@ set showcmd
 
 "show as much of the last line as possible (no @s)
 set display+=lastline
-
-"use the file type plugins
-filetype plugin indent on
-
-"enable syntax highlighting
-syntax on
-
-"extra file types
-au BufRead,BufNewFile *.md  set filetype=markdown
-au BufRead,BufNewFile .vimperatorrc set filetype=vim
 
 "pilcrow
 set list
@@ -103,6 +126,26 @@ set modeline
 set foldmethod=syntax
 set foldminlines=10
 
+"enable mouse (in neovim)
+set mouse=a
+
+"none of that fake english
+set spelllang=en_au
+
+"gruvbox + dark background = life
+set bg=dark
+
+
+"
+" AUTO COMMANDS
+"
+"run Neomake after each write
+autocmd! BufWritePost * Neomake
+
+"extra file types
+au BufRead,BufNewFile *.md  set filetype=markdown
+au BufRead,BufNewFile .vimperatorrc set filetype=vim
+
 "autocommands for filetypes
 au FileType gitcommit   setlocal textwidth=68 spell
 au FileType markdown    setlocal spell
@@ -110,24 +153,26 @@ au FileType text        setlocal textwidth=79 formatoptions+=want spell
 au FileType c           setlocal textwidth=79
 au FileType python      setlocal textwidth=79 foldmethod=indent
 
-"run Neomake after each write
-autocmd! BufWritePost * Neomake
-
-"enable mouse (in neovim)
-set mouse=a
-
-"none of that fake english
-set spelllang=en_au
+autocmd BufNewFile,BufRead *.json setlocal ft=javascript expandtab
 
 "open all folds by default
-autocmd BufEnter * :normal zR
-
-"color scheme
-color gruvbox
-set bg=dark
+autocmd! BufEnter * :normal zR
 
 
-"handle paste (no auto indent)
+
+"
+" CUSTOM VARIABLES
+"
+
+" Enable fenced code block syntax in markdown documents
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+
+
+"
+" CUSTOM FUNCTIONS
+"
+" Fix Mac OSX terminal paste (no auto indent)
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
@@ -136,12 +181,6 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
-
-"let :W do the same thing as :w
-command! W execute "w"
-
-"let :Q do the same thing as :q
-command! Q execute "q"
 
 " Clean whitespace
 function! Clean()
@@ -155,6 +194,7 @@ function! NoDups()
     g/^/m0
 endfunction
 
+" Function to show any identical lines
 function! ShowDups() range
   let lineCounts = {}
   let lineNum = a:firstline
@@ -175,9 +215,6 @@ endfunction
 
 command! -range=% ShowDups <line1>,<line2>call ShowDups()
 
-" Enable fenced code block syntax in markdown documents
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
-
 " When writing, automatically create directories if they don't exist
 function s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
@@ -191,3 +228,4 @@ augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
+
