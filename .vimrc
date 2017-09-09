@@ -41,9 +41,6 @@ nnoremap <Space> za
 "set shift+tab to autocomplete word
 inoremap <S-Tab> <C-n>
 
-"don't require two escapes to exit visual mode
-vnoremap <Esc> <C-c>
-
 "set zs to select first option in spell and correct all occurences
 noremap zs z=1<Enter><Enter>
 
