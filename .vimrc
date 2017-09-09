@@ -5,10 +5,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
+" MUST-HAVE PLUGINS
 Plugin 'godlygeek/csapprox'  " This fixes vim colour schemes in OSX Terminal
-Plugin 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'     " Best colour scheme hands down
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+
+" QUALITY OF LIFE PLUGINS
+Plugin 'benekastah/neomake'  " Asynchronous linting
 
 call vundle#end()
 
@@ -104,6 +109,9 @@ au FileType markdown    setlocal spell
 au FileType text        setlocal textwidth=79 formatoptions+=want spell
 au FileType c           setlocal textwidth=79
 au FileType python      setlocal textwidth=79 foldmethod=indent
+
+"run Neomake after each write
+autocmd! BufWritePost * Neomake
 
 "none of that fake english
 set spelllang=en_au
