@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'noah/vim256-color'  " This fixes vim colour schemes in OSX Terminal
+Plugin 'godlygeek/csapprox'  " This fixes vim colour schemes in OSX Terminal
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
