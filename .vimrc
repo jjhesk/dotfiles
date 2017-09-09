@@ -5,11 +5,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'vinceau/vim-rpeanut-syntax'
-Plugin 'vinceau/vim-ltsa-syntax'
-Plugin 'gerw/vim-latex-suite'
-Plugin 'noah/vim256-color'
+Plugin 'noah/vim256-color'  " This fixes vim colour schemes in OSX Terminal
+Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 call vundle#end()
 
