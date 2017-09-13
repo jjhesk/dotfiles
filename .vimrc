@@ -131,6 +131,9 @@ set mouse=a
 "none of that fake english
 set spelllang=en_au
 
+"enable 256 colour mode
+set t_Co=256
+
 "gruvbox + dark background = life
 set bg=dark
 
