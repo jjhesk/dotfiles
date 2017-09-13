@@ -9,7 +9,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " MUST-HAVE PLUGINS
-Plugin 'godlygeek/csapprox'  " This fixes vim colour schemes in OSX Terminal
 Plugin 'morhetz/gruvbox'     " Best colour scheme hands down
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
