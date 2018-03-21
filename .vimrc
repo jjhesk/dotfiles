@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
 " QUALITY OF LIFE PLUGINS
+Plugin 'tpope/vim-sleuth'  " Automatic indent detection
 Plugin 'w0rp/ale'   " Asynchronouse Lint Engine
 
 call vundle#end()
