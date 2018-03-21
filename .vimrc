@@ -40,7 +40,7 @@ noremap B 5b
 noremap E 5e
 
 "remap Y to be copy to clipboard
-noremap Y "+y
+noremap Y "*y
 
 "disable annoying ZZ save and exit vim
 nnoremap ZZ <nop>
