@@ -14,7 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
 " QUALITY OF LIFE PLUGINS
-Plugin 'benekastah/neomake'  " Asynchronous linting
+Plugin 'w0rp/ale'   " Asynchronouse Lint Engine
 
 call vundle#end()
 
@@ -141,9 +141,6 @@ set bg=dark
 "
 " AUTO COMMANDS
 "
-"run Neomake after each write
-autocmd! BufWritePost * Neomake
-
 "extra file types
 au BufRead,BufNewFile *.md  set filetype=markdown
 au BufRead,BufNewFile .vimperatorrc set filetype=vim
