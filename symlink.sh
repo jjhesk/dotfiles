@@ -6,8 +6,6 @@ mkdir -p "$XDG_CONFIG_HOME/nvim"
 
 ln -s $p/.bashrc ~
 ln -s $p/.gitignore_global ~
-ln -s $p/.gitignore_global ~/.hgignore
-ln -s $p/.hgrc ~
 ln -s $p/.profile ~
 ln -s $p/.pylintrc ~
 ln -s $p/.vimperatorrc ~
