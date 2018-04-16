@@ -1,7 +1,7 @@
 alias partch="ssh -X u5388374@partch.anu.edu.au"
 alias ppartch="ssh -D 8080 -C -N u5388374@partch.anu.edu.au"
 alias dl="aria2c -x 4"
-alias ls="ls -Gh"
+alias ls="ls -GhT"
 alias l="ls -la"
 alias ll="ls -l"
 alias rm="rm -d"
