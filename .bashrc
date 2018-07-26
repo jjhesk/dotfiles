@@ -43,7 +43,6 @@ alias gp="git push"
 alias gpp="git push --set-upstream origin master"
 alias gs="git status"
 alias grm="git rm --cached"
-alias gpg="git push --all google"
 alias gr="git reset --soft HEAD~1"
 
 #hg
