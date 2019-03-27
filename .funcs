@@ -1,0 +1,132 @@
+function cd!() {
+    cd $(pwd)
+}
+
+function gP() {
+    git push --set-upstream origin $(git branch | grep \* | cut -d ' ' -f2)
+}
+
+# make and change directory
+function mkcd() {
+    mkdir -p "$@" && eval cd "\"\$$#\""
+}
+
+# karabiner complex modification installation
+function kbi() {
+    KP="karabiner://karabiner/assets/complex_modifications/import?url="
+    if [ ! -f $@ ]; then
+        open "${KP}${@}"
+    else
+        open "${KP}file://$(realpath $@)"
+    fi
+}
+
+#better ping function
+function P() {
+    if [ -z "$1" ] #check if argument is empty string
+    then
+        ping google.com
+    else
+        ping "$1"
+    fi
+}
+
+# change git user
+function gu() {
+    if [ "$1" = "va" ]
+    then
+        git config user.name "Vince Au"
+        git config user.email "vinceau09@gmail.com"
+    elif [ "$1" = "lv" ]
+    then
+        git config user.name "little-vince"
+        git config user.email "littlevince09@gmail.com"
+    elif [ "$1" = "anu" ]
+    then
+        git config user.name "Vincent Au"
+        git config user.email "vincent.au@anu.edu.au"
+    else
+        echo "Incorrect input. Expecting 'va' or 'lv' or 'anu'"
+    fi
+}
+
+# case insensitive file find function - filenames
+function f() {
+    find . -type f -iname "*$@*"
+}
+
+# case insensitive content find function - file content
+function F() {
+    grep -r "$@" .
+}
+
+#function go() {
+#    gcc $@.c -Wall -g -o $@
+#}
+
+
+
+# DEP_BIN=$(which dep)
+# # always run dep ensure with -v flag
+# function dep() {
+#     if [ "$1" = "ensure" ] #check if second argument is empty
+#     then
+#         "$DEP_BIN" ensure -v
+#     else
+#         "$DEP_BIN" "$@"
+#     fi
+# }
+
+# pandoc function that by default outputs pdf
+# add desired output format as second argument
+function pd() {
+    if [ -z "$2" ] #check if second argument is empty
+    then
+        pandoc "$1" -o "$1.pdf" && open "$1.pdf"
+    else
+        pandoc "$1" -o "$1.$2" && open "$1.$2"
+    fi
+}
+
+# like pd() but will automatically serve start serving and rebuilding on edit
+function spd() {
+    if [ -z "$2" ] #check if second argument is empty
+    then
+        echo "$1" | entr pandoc "$1" -o "$1.pdf"
+    else
+        echo "$1" | entr pandoc "$1" -o "$1.$2"
+    fi
+}
+
+function gitsync() {
+    git checkout gh-pages
+    git rebase master
+    git push origin gh-pages
+    git checkout master
+}
+
+function fixperms() {
+    find ~ -type d -print0 | xargs -0 chmod 0775
+    find ~ -type f -print0 | xargs -0 chmod 0664
+}
+
+
+function renameall() {
+    for filename in *
+        do mv "$filename" "${filename//$1/$2}"
+    done
+}
+
+# usage cat blah.json | printjson | less
+function printjson() {
+    python -c "import sys, json; data = json.load(sys.stdin); print(json.dumps(data, indent=4, sort_keys=True))"
+}
+
+function npm() {
+    [ -d "./node_modules" ] && touch "./node_modules/.metadata_never_index" >/dev/null 2>&1
+    command npm "$@"
+    [ -d "./node_modules" ] && touch "./node_modules/.metadata_never_index" >/dev/null 2>&1
+}
+
+# vim: ft=sh
+
